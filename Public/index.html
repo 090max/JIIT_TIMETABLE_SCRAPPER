@@ -1,0 +1,53 @@
+<html>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(function()
+{
+$('#upload').on('submit',function (e) {
+        e.preventDefault();
+        alert(form1.imgUploader.value);
+        var that=$(this);
+        url=that.attr('action');
+        method=that.attr('method');
+        data={};
+       data["imgUploader"]=form1.imgUploader.value;
+          
+          $.ajax({
+            url:'127.0.0.1:3000',
+            type:method,
+            data:data,
+            dataType:'json',
+            success:function(response)
+            {
+              alert("s");
+              console.log(response);
+            }
+          });
+        return false;
+
+});
+});
+</script>
+<center><h2>Enter your details!!</h2>
+
+       <form method="post" action="/api" >
+       <br>
+            <input type="text" name="user" placeholder="Enter your name">
+            <br>
+    
+         <input type="text" name="age" placeholder="Enter your age">
+         <br>
+       <input type="submit" value="Submit form">
+    </form>
+
+       <form method="post" name="form1" id="upload" action="/" enctype="multipart/form-data">
+         <label>Upload your image</label>
+        <input type="file" name="imgUploader" multiple />
+       <input type="submit" value="upload">
+       </form>
+
+    </center>
+
+</body>
+</html>

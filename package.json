@@ -1,0 +1,21 @@
+{
+  "name": "node-ejs.js",
+  "version": "1.0.0",
+  "description": "practice for node and ejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "max",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "crypto": "^1.0.1",
+    "ejs": "^2.6.1",
+    "express": "*",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "node-xlsx": "^0.15.0",
+    "xlsx": "^0.14.3"
+  }
+}
